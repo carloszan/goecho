@@ -72,7 +72,7 @@ func (s *Server) handleMessage(msg Message) error {
 		return err
 	}
 
-	slog.Info("sending message back: ", "message", msg.cmd)
+	slog.Info("sending message back", "to", peer.conn.RemoteAddr(), "message", msg.cmd)
 
 	return nil
 }
